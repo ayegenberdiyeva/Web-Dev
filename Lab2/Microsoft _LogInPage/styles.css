@@ -1,0 +1,402 @@
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  padding: 0 5%;
+  font-size: 13px;
+  height: 54px;
+  margin-bottom: 2px;
+  z-index: 502;
+  margin-top: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-width: 280px;
+  width: 100%;
+  color: #262626;
+  color: #333;
+}
+
+#microsoft-logo {
+  padding: 16px 6px 16px 10px;
+  float: left;
+  height: 41%;
+  margin-top: 1px;
+  width: 137px;
+  outline-offset: -2px;
+}
+
+#microsoft-image {
+  margin-top: -3px;
+  width: 108px;
+  display: block;
+  height: auto;
+  overflow-x: visible;
+}
+
+.list_header {
+  display: flex;
+  flex: 1;
+  padding: 16px 8px 10px;
+  border: 1px solid transparent;
+  display: inline-block;
+  outline-offset: -2px;
+  margin-top: 1px;
+  text-decoration: none;
+}
+
+.list_header2 {
+  display: flex;
+  padding: 16px 8px 10px;
+  border: 1px solid transparent;
+  display: inline-block;
+  outline-offset: -2px;
+  margin-top: 1px;
+  text-decoration: none;
+}
+
+.list_header a:hover,
+.list_header2 a:hover {
+  border-bottom: solid 2px #333;
+  padding-bottom: 2px;
+}
+
+.list_header li,
+.list_header2 li {
+  padding: 0 10px;
+  text-align: match-parent;
+}
+
+#user {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: -5px;
+}
+
+#user-img {
+  margin-left: 8px; /* Отступ между текстом и изображением */
+  order: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+  text-align: match-parent;
+}
+
+header > ul > li {
+  display: inline-block;
+}
+
+.alert {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  border-radius: 0;
+  border: 0.0625rem solid transparent;
+  position: relative;
+  padding: 1rem 1.5rem;
+  background-color: #0067b8;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  height: 58px;
+  align-items: center;
+}
+
+#alert-text {
+  padding-right: 5px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+#alert-text:hover {
+  text-decoration: underline;
+}
+
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  animation: slideshow 15s infinite;
+}
+
+.slide {
+  flex: 1 0 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+@keyframes slideshow {
+  0%,
+  33.3% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-100%);
+  }
+  40.1%,
+  66.6% {
+    transform: translateX(-100%);
+  }
+  73.3% {
+    transform: translateX(-200%);
+  }
+  73.4%,
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.container-slider {
+  display: none;
+}
+
+.slide:nth-child(1) .container-slider {
+  display: block;
+}
+
+.slide:nth-child(2) .container-slider {
+  display: block;
+}
+
+.slide:nth-child(3) .container-slider {
+  display: block;
+}
+
+.container-slider {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 20px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 35%;
+  margin-bottom: -1rem;
+  margin-top: -0.5rem;
+  align-items: center;
+}
+
+.slideshow-container .slides {
+  display: flex;
+  animation: slideshow 15s infinite;
+}
+
+.slide {
+  flex: 1 0 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+#slide1 h2,
+#slide2 h2,
+#slide3 h2 {
+  font-size: 2.3125rem;
+  margin-bottom: 1.25rem;
+}
+
+#slide1 p,
+#slide2 p,
+#slide3 p {
+  margin-bottom: 1.5rem;
+}
+
+#slide1 a,
+#slide2 a,
+#slide3 a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0067b8;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+#slide1 a:hover,
+#slide2 a:hover,
+#slide3 a:hover {
+  background-color: #00529b;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 30px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.control-btn {
+  background-color: white;
+  color: black;
+  border: 1.5px solid black;
+  padding: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn.arrow {
+  border: none;
+  font-size: 20px;
+}
+
+.control-btn.dot {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid black;
+  align-items: center;
+}
+
+.control-btn.dot:hover,
+.control-btn.pause:hover {
+  background-color: black;
+  color: white;
+}
+
+.devices {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.devices-content {
+  text-align: center;
+}
+
+.devices a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #0067b8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.devices-content p {
+  margin-bottom: 20px;
+}
+
+.devices-content li {
+  display: inline-block;
+  padding: 15px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  background-color: #fff;
+  color: #333;
+  margin: auto;
+}
+
+.cards-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.inner-cards {
+  border: 1px solid #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 400px;
+}
+
+.inner-cards img {
+  width: 100%;
+  height: auto;
+}
+
+.inner-cards h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  padding: 0 20px;
+  color: #000;
+  flex-grow: 1;
+}
+
+.inner-cards p {
+  line-height: 1.5;
+}
+
+.inner-cards .btn {
+  background-color: #0067b8;
+  color: #fff;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-lg,
+.btn-xlg {
+  margin-top: 0;
+}

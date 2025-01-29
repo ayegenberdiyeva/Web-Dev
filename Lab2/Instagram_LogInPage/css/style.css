@@ -733,3 +733,16 @@ footer {
     overflow: visible;
     unicode-bidi: isolate;
 }
+
+@media (min-width: 360px) and (max-width: 1024px) {
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .phones-container{
+        display: none;
+    }
+ }
