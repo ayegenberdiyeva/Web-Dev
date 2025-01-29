@@ -5,7 +5,8 @@ passwordInput.addEventListener('input', () => {
     toggleButton.style.display = passwordInput.value ? 'block' : 'none';
 });
 
-toggleButton.addEventListener('click', () => {
+toggleButton.addEventListener('click', (e) => {
+    e.preventDefault()
     if (passwordInput.type == 'password') {
         passwordInput.type = 'text';
         toggleButton.textContent = 'Hide';
