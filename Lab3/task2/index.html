@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>ToDo List</header>
-    <div class="container">
-        <h1>ToDo List</h1>
-        <div class="new-task-container">
-            <input type="text" id='input-box' placeholder='New Task'>
-            <button onclick='addTask()'>Add</button>
+    <div class="main-container">
+        <header>ToDo List</header>
+        <div class="container">
+            <h1>ToDo List</h1>
+            <div class="new-task-container">
+                <div class="add-task-container">
+                        <input type="text" class='input-box' id='input-box' placeholder='New Task'>
+                        <button onclick='addTask()' class='add-button' id='add-button'>Add</button>
+                </div>
+            </div>
+            <div class="task-list-container">
+                <ul id='task-list'></ul>
+            </div>
         </div>
-        <div class="task-list-container">
-            <ul id='task-list'></ul>
-        </div>
-    </div>
-    <script src='script.js'></script>
-</body>
+        <script src='script.js'></script>
+        </div>  
+    </body>
 </html>

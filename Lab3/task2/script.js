@@ -27,6 +27,12 @@ function createTaskElement(text, completed = false) {
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "🗑";
+    deleteButton.onmouseover = function() {
+        deleteButton.textContent = "💥"
+    };
+    deleteButton.onmouseout = function() {
+        deleteButton.textContent = "🗑"
+    }
     deleteButton.onclick = function() {
         li.remove();
         saveTasks();
@@ -48,6 +54,7 @@ function addTask() {
         taskList.appendChild(li);
         inputBox.value = "";
         saveTasks();
+        addButton.style.display = 'none';
     }
 }
 
@@ -63,5 +70,22 @@ function saveTasks() {
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
+
+const addButton = document.getElementById("add-button");
+const text = document.getElementById("input-box");
+
+text.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        addTask();
+    }
+});
+
+text.addEventListener('input', () => {
+    addButton.style.display = text.value ? 'block' : 'none';
+});
+
+
 
 window.onload = loadTasks;
