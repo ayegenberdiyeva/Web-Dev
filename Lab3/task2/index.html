@@ -10,11 +10,19 @@
     <div class="main-container">
         <header>ToDo List</header>
         <div class="container">
-            <h1>ToDo List</h1>
+            <div class='todo-container'>
+                <h1>ToDo List</h1>
+                <!-- <button id='sort-button' class='sort-button'>sort</button>     -->
+                <label class="switch">
+                    <input type="checkbox" id='sort-button'>
+                    <span class="slider"></span>
+                </label>
+            </div>
             <div class="new-task-container">
                 <div class="add-task-container">
                         <input type="text" class='input-box' id='input-box' placeholder='New Task'>
                         <button onclick='addTask()' class='add-button' id='add-button'>Add</button>
+                         
                 </div>
             </div>
             <div class="task-list-container">

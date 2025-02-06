@@ -1,12 +1,26 @@
-function loadTasks() {
+function loadTasks(sortCompleted = false) {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    const taskList = document.getElementById("tasks-list");
+    const taskList = document.getElementById("task-list");
+
+    taskList.innerHTML = "";
+
+    if (sortCompleted) {
+        tasks.sort((a, b) => b.completed - a.completed);
+    } else {
+        tasks.sort((a, b) => a.completed - b.completed);
+    }
+    
 
     tasks.forEach((task) => {
         const li = createTaskElement(task.text, task.completed);
         taskList.appendChild(li);
     });
 }
+
+document.getElementById("sort-button").addEventListener("change", function() {
+    loadTasks(this.checked);
+});
+
 
 function createTaskElement(text, completed = false) {
     const li = document.createElement("li");
@@ -88,4 +102,4 @@ text.addEventListener('input', () => {
 
 
 
-window.onload = loadTasks;
+window.onload = () => loadTasks(false);
