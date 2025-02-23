@@ -1,0 +1,35 @@
+<div class="products-container">
+  <div class="product-card">
+    <img class="product-image" [src]="product.imageUrl" [alt]="product.name" />
+    <div class="product-info">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p class="rating">⭐ {{ product.rating }}/5</p>
+      <p class="likes">❤️ {{ product.likes }} Likes</p>
+      <div class="buttons">
+        <button
+          class="like-button"
+          [class.liked]="isLiked"
+          (click)="toggleLike()"
+        >
+          {{ isLiked ? "Unlike 💔" : "Like ❤️" }}
+        </button>
+        <button
+          class="share-button telegram"
+          (click)="shareOn('telegram', product.link!)"
+        >
+          Telegram
+        </button>
+        <button
+          class="share-button whatsapp"
+          (click)="shareOn('whatsapp', product.link!)"
+        >
+          WhatsApp
+        </button>
+
+        <button class="delete-button" (click)="onRemove()">🗑️ Remove</button>
+      </div>
+      <a href="/details">Learn More</a>
+    </div>
+  </div>
+</div>
