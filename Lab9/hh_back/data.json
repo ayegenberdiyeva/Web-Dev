@@ -1,0 +1,102 @@
+[
+    {
+        "model": "api.company",
+        "pk": 1,
+        "fields": {
+            "name": "Google",
+            "description": "Tech giant",
+            "city": "Mountain View",
+            "address": "1600 Amphitheatre Parkway"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 2,
+        "fields": {
+            "name": "Microsoft",
+            "description": "Software leader",
+            "city": "Redmond",
+            "address": "1 Microsoft Way"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 3,
+        "fields": {
+            "name": "Amazon",
+            "description": "E-commerce giant",
+            "city": "Seattle",
+            "address": "410 Terry Ave N"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 4,
+        "fields": {
+            "name": "Tesla",
+            "description": "Electric car maker",
+            "city": "Austin",
+            "address": "13101 Harold Green Rd"
+        }
+    },
+    {
+        "model": "api.company",
+        "pk": 5,
+        "fields": {
+            "name": "Apple",
+            "description": "Consumer electronics",
+            "city": "Cupertino",
+            "address": "1 Apple Park Way"
+        }
+    },
+    {
+        "model": "api.vacancy",
+        "pk": 1,
+        "fields": {
+            "name": "Software Engineer",
+            "description": "Develop scalable applications",
+            "salary": 120000,
+            "company": 1
+        }
+    },
+    {
+        "model": "api.vacancy",
+        "pk": 2,
+        "fields": {
+            "name": "Data Analyst",
+            "description": "Analyze large datasets",
+            "salary": 90000,
+            "company": 2
+        }
+    },
+    {
+        "model": "api.vacancy",
+        "pk": 3,
+        "fields": {
+            "name": "Cloud Engineer",
+            "description": "Manage cloud infrastructure",
+            "salary": 110000,
+            "company": 3
+        }
+    },
+    {
+        "model": "api.vacancy",
+        "pk": 4,
+        "fields": {
+            "name": "AI Researcher",
+            "description": "Work on machine learning models",
+            "salary": 150000,
+            "company": 4
+        }
+    },
+    {
+        "model": "api.vacancy",
+        "pk": 5,
+        "fields": {
+            "name": "Frontend Developer",
+            "description": "Create responsive web apps",
+            "salary": 100000,
+            "company": 5
+        }
+    }
+]
