@@ -6,6 +6,9 @@ from .views import (
     vacancy_list,
     vacancy_detail,
     top_ten_vacancies,
+    application_list,
+    application_detail,
+    application_update_delete,
 )
 
 urlpatterns = [
@@ -15,4 +18,7 @@ urlpatterns = [
     path('vacancies/', vacancy_list, name='vacancy_list'),
     path('vacancies/<int:id>/', vacancy_detail, name='vacancy_detail'),
     path('vacancies/top_ten/', top_ten_vacancies, name='top_ten_vacancies'),
+    path('applications/', application_list, name='application_list'),
+    path('applications/<int:id>/', application_detail, name='application_detail'),
+    path('applications/<int:id>/update_delete/', application_update_delete, name='application_update_delete'),
 ]
